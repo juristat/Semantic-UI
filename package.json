@@ -1,6 +1,6 @@
 {
   "name"        : "semantic-ui",
-  "version"     : "1.12.3",
+  "version"     : "1.12.4-juristat",
   "title"       : "Semantic UI",
   "description" : "Semantic empowers designers and developers by creating a shared vocabulary for UI.",
   "homepage"    : "http://www.semantic-ui.com",
@@ -48,6 +48,7 @@
     "better-console"    : "0.*",
     "del"               : "1.*",
     "extend"            : "2.*",
+    "fs-extra"          : "3.*",
     "gulp"              : "3.*",
     "gulp-autoprefixer" : "2.*",
     "gulp-chmod"        : "1.*",
@@ -74,8 +75,7 @@
     "gulp-watch"        : "4.*",
     "jquery"            : "x.*",
     "mkdirp"            : "0.*",
-    "require-dot-file"  : "0.*",
-    "wrench"            : "https://github.com/derekslife/wrench-js/tarball/156eaceed68ed31ffe2a3ecfbcb2be6ed1417fb2"
+    "require-dot-file"  : "0.*"
   },
   "devDependencies": {
     "github"                : "^0.2.3",

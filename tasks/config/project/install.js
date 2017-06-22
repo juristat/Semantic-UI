@@ -11,6 +11,10 @@ var
   requireDotFile = require('require-dot-file')
 ;
 
+function excludeHiddenUnixFilter(src, dest) {
+  return !/^\./.test(path.basename(src));
+}
+
 /*******************************
           When to Ask
 *******************************/
@@ -730,20 +734,18 @@ module.exports = {
     },
 
     /* Copy Install Folders */
-    wrench: {
+    fsExtraCopy: {
 
       // overwrite existing files update & install (default theme / definition)
       overwrite: {
-        forceDelete       : true,
-        excludeHiddenUnix : true,
-        preserveFiles     : false
+        overwrite : true,
+        filter    : excludeHiddenUnixFilter
       },
 
       // only create files that don't exist (site theme update)
       merge: {
-        forceDelete       : false,
-        excludeHiddenUnix : true,
-        preserveFiles     : true
+        overwrite : false,
+        filter    : excludeHiddenUnixFilter
       }
 
     }
